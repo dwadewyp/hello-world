@@ -8,11 +8,8 @@ try:
 
     coupon = open('random.txt','r')
     value = coupon.read().split("\n")
-    # print value,type(value),"value"
-    print value,type(value),"value"
 
     for i in value:
-        print i,type(i),"iha"
         cur.execute('insert into coupon(couponn) values("%s");' %(i))
 
     conn.commit()
